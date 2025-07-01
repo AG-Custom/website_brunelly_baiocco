@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Footer.module.scss';
 
 interface FooterProps {
@@ -16,22 +17,22 @@ export default function Footer({ year = new Date().getFullYear(), name }: Footer
         </div>
         
         <div className={styles.links}>
-          <a href="/politica-privacidade" className={styles.link}>
+          <Link href="/politica-privacidade" className={styles.link}>
             Política de Privacidade
-          </a>
-          <a href="/termos-uso" className={styles.link}>
+          </Link>
+          <Link href="/termos-uso" className={styles.link}>
             Termos de Uso
-          </a>
+          </Link>
         </div>
         
         <div className={styles.social}>
-          <a href="#" className={styles.socialLink} aria-label="Instagram">
+          <a href="#" className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             Instagram
           </a>
-          <a href="#" className={styles.socialLink} aria-label="LinkedIn">
+          <a href="#" className={styles.socialLink} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="#" className={styles.socialLink} aria-label="Email">
+          <a href="mailto:" className={styles.socialLink} aria-label="Email">
             Email
           </a>
         </div>

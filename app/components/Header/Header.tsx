@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Header.module.scss';
 
 interface HeaderProps {
@@ -9,9 +10,9 @@ export default function Header({ title }: HeaderProps) {
     <header className={styles.header}>
       <h1 className={styles.title}>{title}</h1>
       <nav className={styles.nav}>
-        <a href="/" className={styles.navLink}>Início</a>
-        <a href="/sobre" className={styles.navLink}>Sobre</a>
-        <a href="/contato" className={styles.navLink}>Contato</a>
+        <Link href="/" className={styles.navLink}>Início</Link>
+        <Link href="/sobre" className={styles.navLink}>Sobre</Link>
+        <Link href="/contato" className={styles.navLink}>Contato</Link>
       </nav>
     </header>
   );
