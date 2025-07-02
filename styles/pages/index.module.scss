@@ -5,8 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .main {
@@ -25,6 +25,7 @@
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  color: var(--color-text);
   
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -39,8 +40,8 @@
   margin: 0;
   line-height: 1.5;
   font-size: 1.5rem;
-  font-weight: 300;
-  opacity: 0.9;
+  font-weight: 400;
+  color: var(--color-text);
   
   @media (max-width: 768px) {
     font-size: 1.25rem;
@@ -48,5 +49,56 @@
   
   @media (max-width: 480px) {
     font-size: 1rem;
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.ctaButton {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Josefin Slab', serif;
+  text-decoration: none;
+  display: inline-block;
+  
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.ctaSecondary {
+  background-color: transparent;
+  color: var(--color-button-bg);
+  border: 2px solid var(--color-button-bg);
+  padding: 14px 30px;
+  
+  &:hover {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    opacity: 1;
   }
 } 
