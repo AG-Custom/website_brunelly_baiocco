@@ -62,7 +62,7 @@ export default function Sobre() {
             </div>
           </div>
         </main>
-        <Footer name="Brunelly Baiocco" />
+        <Footer />
       </div>
     </>
   );

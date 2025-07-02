@@ -97,7 +97,7 @@ export default function Contato() {
             </div>
           </div>
         </main>
-        <Footer name="Brunelly Baiocco" />
+        <Footer />
       </div>
     </>
   );
