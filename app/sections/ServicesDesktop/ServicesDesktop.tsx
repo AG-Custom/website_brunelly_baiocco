@@ -2,7 +2,7 @@ import styles from './ServicesDesktop.module.scss';
 
 const ServicesDesktop = () => {
   return (
-    <section className={styles.servicesSection}>
+    <section id="services" className={styles.servicesSection}>
       <div className={styles.backgroundContainer}></div>
       <div className={styles.overlay}></div>
       

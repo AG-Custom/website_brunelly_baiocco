@@ -35,6 +35,26 @@ export default function HeaderMobile() {
     }
   };
 
+  const scrollToServices = (e: React.MouseEvent) => {
+    e.preventDefault();
+    closeMenu();
+    if (router.pathname !== '/') {
+      router.push('/').then(() => {
+        setTimeout(() => {
+          const element = document.getElementById('services') || document.getElementById('services-mobile');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      });
+    } else {
+      const element = document.getElementById('services') || document.getElementById('services-mobile');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -61,6 +81,9 @@ export default function HeaderMobile() {
         </Link>
         <a href="#aboutme" className={styles.menuLink} onClick={scrollToAboutMe}>
           Sobre
+        </a>
+        <a href="#services" className={styles.menuLink} onClick={scrollToServices}>
+          Serviços
         </a>
         <Link href="/projetos" className={styles.menuLink} onClick={closeMenu}>
           Projetos

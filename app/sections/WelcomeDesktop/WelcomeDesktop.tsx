@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './WelcomeDesktop.module.scss';
 
 const WelcomeDesktop = () => {
@@ -40,7 +41,7 @@ const WelcomeDesktop = () => {
         <div className={styles.content}>
           <h2 className={styles.title}>Transformando Espaços</h2>
           <p className={styles.subtitle}>em refúgios de saúde e bem-estar</p>
-          <button className={styles.ctaButton}>saiba mais</button>
+          <Link href="/projetos" className={styles.ctaButton}>saiba mais</Link>
         </div>
       </div>
     </div>

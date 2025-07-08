@@ -30,7 +30,7 @@ export default function ServicesMobile() {
   ];
 
   return (
-    <section className={styles.container}>
+    <section id="services-mobile" className={styles.container}>
       <div className={styles.content}>
         <h2 className={styles.title}>Meus Serviços</h2>
         
