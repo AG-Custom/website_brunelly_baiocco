@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../../app/components/Header';
-import Footer from '../../app/components/Footer';
+import Header from '../../app/components/HeaderDesktop';
+import Footer from '../../app/components/FooterDesktop';
 import styles from '../../styles/pages/sobre.module.scss';
 
 export default function Sobre() {

@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '../app/components/Header';
-import Footer from '../app/components/Footer';
-import Welcome from '../app/sections/Welcome';
+import Header from '../app/components/HeaderDesktop';
+import Footer from '../app/components/FooterDesktop';
+import Welcome from '../app/sections/WelcomeDesktop';
 import styles from '../styles/pages/index.module.scss';
 
 export default function Home() {
