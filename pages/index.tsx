@@ -4,6 +4,7 @@ import Footer from '../app/components/FooterDesktop';
 import WelcomeDesktop from '../app/sections/WelcomeDesktop';
 import AboutMeDesktop from '../app/sections/AboutMeDesktop';
 import ServicesDesktop from '../app/sections/ServicesDesktop';
+import RequestBudgetDesktop from '../app/sections/RequestBudgetDesktop';
 import styles from '../styles/pages/index.module.scss';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
           <WelcomeDesktop />
           <AboutMeDesktop />
           <ServicesDesktop />
+          <RequestBudgetDesktop />
         </main>
       </div>
       <Footer />
