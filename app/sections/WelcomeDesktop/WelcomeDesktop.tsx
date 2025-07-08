@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from './Welcome.module.scss';
+import styles from './WelcomeDesktop.module.scss';
 
-const Welcome = () => {
+const WelcomeDesktop = () => {
   return (
     <div className={styles.welcomeSection}>
       <div className={styles.imageContainer}>
@@ -47,4 +47,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome; 
+export default WelcomeDesktop; 

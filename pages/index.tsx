@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Header from '../app/components/HeaderDesktop';
 import Footer from '../app/components/FooterDesktop';
-import Welcome from '../app/sections/WelcomeDesktop';
+import WelcomeDesktop from '../app/sections/WelcomeDesktop';
+import AboutMeDesktop from '../app/sections/AboutMeDesktop';
 import styles from '../styles/pages/index.module.scss';
 
 export default function Home() {
@@ -17,7 +18,8 @@ export default function Home() {
       <div className={styles.container}>
         <Header />
         <main className={styles.main}>
-          <Welcome />
+          <WelcomeDesktop />
+          <AboutMeDesktop />
         </main>
         <Footer />
       </div>
