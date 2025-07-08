@@ -40,6 +40,9 @@ export default function HeaderMobile() {
         <Link href="/sobre" className={styles.menuLink} onClick={closeMenu}>
           Sobre
         </Link>
+        <Link href="/projetos" className={styles.menuLink} onClick={closeMenu}>
+          Projetos
+        </Link>
         <Link href="/contato" className={styles.menuLink} onClick={closeMenu}>
           Contato
         </Link>
