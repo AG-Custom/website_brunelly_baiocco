@@ -9,13 +9,39 @@ const Welcome = () => {
           src="/transformacao_espaco_bem_estar.png"
           alt="Transformação de Espaço"
           width={1000}
-          height={500}
+          height={800}
+          quality={100}
+          priority={true}
+          sizes="(max-width: 1359px) 600px, (max-width: 1599px) 650px, (max-width: 1919px) 800px, 1000px"
+          style={{
+            objectFit: 'cover',
+            width: 'auto',
+            height: 'auto'
+          }}
         />
       </div>
       <div className={styles.textContainer}>
-        <h2 className={styles.title}>Transformando Espaços</h2>
-        <p className={styles.subtitle}>em refúgios de saúde e bem-estar</p>
-        <button className={styles.ctaButton}>saiba mais</button>
+        <Image
+          src="/background-home.png"
+          alt="Background"
+          width={1000}
+          height={800}
+          quality={100}
+          priority={true}
+          sizes="(max-width: 1359px) 600px, (max-width: 1599px) 650px, (max-width: 1919px) 800px, 1000px"
+          className={styles.backgroundImage}
+          style={{
+            objectFit: 'cover',
+            width: 'auto',
+            height: 'auto'
+          }}
+        />
+        <div className={styles.overlay}></div>
+        <div className={styles.content}>
+          <h2 className={styles.title}>Transformando Espaços</h2>
+          <p className={styles.subtitle}>em refúgios de saúde e bem-estar</p>
+          <button className={styles.ctaButton}>saiba mais</button>
+        </div>
       </div>
     </div>
   );
