@@ -11,10 +11,10 @@ export default function Footer() {
         
         <div className={styles.logo}>
           <Image
-            src="/logo_footer.png"
+            src="/logoAG.svg"
             alt="AG Custom Logo"
-            width={80}
-            height={30}
+            width={40}
+            height={10}
             quality={100}
             priority={false}
             style={{

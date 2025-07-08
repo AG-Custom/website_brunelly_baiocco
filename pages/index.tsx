@@ -17,14 +17,14 @@ export default function Home() {
       </Head>
 
       <div className={styles.container}>
-        <Header />
+      <Header />
         <main className={styles.main}>
           <WelcomeDesktop />
           <AboutMeDesktop />
           <ServicesDesktop />
         </main>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
