@@ -3,6 +3,7 @@ import Header from '../app/components/HeaderDesktop';
 import Footer from '../app/components/FooterDesktop';
 import WelcomeDesktop from '../app/sections/WelcomeDesktop';
 import AboutMeDesktop from '../app/sections/AboutMeDesktop';
+import ServicesDesktop from '../app/sections/ServicesDesktop';
 import styles from '../styles/pages/index.module.scss';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <main className={styles.main}>
           <WelcomeDesktop />
           <AboutMeDesktop />
+          <ServicesDesktop />
         </main>
         <Footer />
       </div>
