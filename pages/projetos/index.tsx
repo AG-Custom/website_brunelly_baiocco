@@ -7,9 +7,11 @@ import FooterDesktop from '../../app/components/FooterDesktop';
 import ProjectsDesktop from '../../app/sections/ProjectsDesktop';
 import TestimonialsDesktop from '../../app/sections/TestimonialsDesktop';
 
-// Mobile Components (para futura implementação)
+// Mobile Components
 import HeaderMobile from '../../app/components/HeaderMobile';
 import FooterMobile from '../../app/components/FooterMobile';
+import ProjectsMobile from '../../app/sections/ProjectsMobile';
+import TestimonialsMobile from '../../app/sections/TestimonialsMobile';
 
 import styles from '../../styles/pages/projetos.module.scss';
 
@@ -48,9 +50,9 @@ export default function Projetos() {
             </p>
           </section>
 
-          <ProjectsDesktop />
+          {isMobile ? <ProjectsMobile /> : <ProjectsDesktop />}
           
-          <TestimonialsDesktop />
+          {isMobile ? <TestimonialsMobile /> : <TestimonialsDesktop />}
         </main>
 
         {isMobile ? <FooterMobile /> : <FooterDesktop />}
