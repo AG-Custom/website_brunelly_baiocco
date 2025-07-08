@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import styles from './Header.module.scss';
 
 export default function HeaderMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -11,6 +13,26 @@ export default function HeaderMobile() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const scrollToAboutMe = (e: React.MouseEvent) => {
+    e.preventDefault();
+    closeMenu();
+    if (router.pathname !== '/') {
+      router.push('/').then(() => {
+        setTimeout(() => {
+          const element = document.getElementById('aboutme') || document.getElementById('aboutme-mobile');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      });
+    } else {
+      const element = document.getElementById('aboutme') || document.getElementById('aboutme-mobile');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
@@ -37,9 +59,9 @@ export default function HeaderMobile() {
         <Link href="/" className={styles.menuLink} onClick={closeMenu}>
           Home
         </Link>
-        <Link href="/sobre" className={styles.menuLink} onClick={closeMenu}>
+        <a href="#aboutme" className={styles.menuLink} onClick={scrollToAboutMe}>
           Sobre
-        </Link>
+        </a>
         <Link href="/projetos" className={styles.menuLink} onClick={closeMenu}>
           Projetos
         </Link>

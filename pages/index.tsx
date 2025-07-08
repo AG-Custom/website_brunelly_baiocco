@@ -45,7 +45,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div className={styles.container}>
         {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
         
@@ -56,7 +56,7 @@ export default function Home() {
             {isMobile ? <ServicesMobile /> : <ServicesDesktop />}
             {isMobile ? <RequestBudgetMobile /> : <RequestBudgetDesktop />}
           </main>
-        </div>
+          </div>
         
         {isMobile ? <FooterMobile /> : <FooterDesktop />}
       </div>

@@ -3,7 +3,7 @@ import styles from './AboutMeDesktop.module.scss';
 
 const AboutMeDesktop = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section id="aboutme" className={styles.aboutSection}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
                     <Image

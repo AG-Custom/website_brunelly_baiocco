@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './AboutMeMobile.module.scss';
 
 export default function AboutMeMobile() {
   return (
-    <section className={styles.container}>
+    <section id="aboutme-mobile" className={styles.container}>
       <div className={styles.content}>
         <div className={styles.imageContainer}>
           <Image
@@ -31,9 +30,7 @@ export default function AboutMeMobile() {
             Por isso, trabalho de forma personalizada, ouvindo seus sonhos e transformando-os em realidade 
             através de projetos únicos e inovadores.
           </p>
-          <Link href="/sobre" className={styles.button}>
-            Saiba mais sobre mim
-          </Link>
+
         </div>
       </div>
     </section>
