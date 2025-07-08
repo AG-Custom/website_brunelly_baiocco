@@ -1,10 +1,30 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../../app/components/HeaderDesktop';
-import Footer from '../../app/components/FooterDesktop';
+import { useState, useEffect } from 'react';
+
+// Desktop Components
+import HeaderDesktop from '../../app/components/HeaderDesktop';
+import FooterDesktop from '../../app/components/FooterDesktop';
+
+// Mobile Components
+import HeaderMobile from '../../app/components/HeaderMobile';
+import FooterMobile from '../../app/components/FooterMobile';
+
 import styles from '../../styles/pages/sobre.module.scss';
 
 export default function Sobre() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
   return (
     <>
       <Head>
@@ -15,8 +35,8 @@ export default function Sobre() {
       </Head>
 
       <div className={styles.container}>
-        <Header />
-        <main className={styles.main}>
+        {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
+        <main className={`${styles.main} ${isMobile ? styles.mobile : ''}`}>
           <h1 className={styles.title}>
             Sobre Mim
           </h1>
@@ -62,7 +82,7 @@ export default function Sobre() {
             </div>
           </div>
         </main>
-        <Footer />
+        {isMobile ? <FooterMobile /> : <FooterDesktop />}
       </div>
     </>
   );

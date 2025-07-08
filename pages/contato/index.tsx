@@ -1,9 +1,29 @@
 import Head from 'next/head';
-import Header from '../../app/components/HeaderDesktop';
-import Footer from '../../app/components/FooterDesktop';
+import { useState, useEffect } from 'react';
+
+// Desktop Components
+import HeaderDesktop from '../../app/components/HeaderDesktop';
+import FooterDesktop from '../../app/components/FooterDesktop';
+
+// Mobile Components
+import HeaderMobile from '../../app/components/HeaderMobile';
+import FooterMobile from '../../app/components/FooterMobile';
+
 import styles from '../../styles/pages/contato.module.scss';
 
 export default function Contato() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
   return (
     <>
       <Head>
@@ -14,8 +34,8 @@ export default function Contato() {
       </Head>
 
       <div className={styles.container}>
-        <Header />
-        <main className={styles.main}>
+        {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
+        <main className={`${styles.main} ${isMobile ? styles.mobile : ''}`}>
           <h1 className={styles.title}>
             Contato
           </h1>
@@ -85,19 +105,19 @@ export default function Contato() {
               <h2 className={styles.sectionTitle}>Outras Formas de Contato</h2>
               <div className={styles.methods}>
                 <div className={styles.method}>
-                  <strong>Email:</strong> contato@brunellybaiocco.com
+                  <strong>Email:</strong> brunellybaiocco.arq@gmail.com
                 </div>
                 <div className={styles.method}>
-                  <strong>Telefone:</strong> (11) 99999-9999
+                  <strong>Telefone:</strong> (27) 99659-0453
                 </div>
                 <div className={styles.method}>
-                  <strong>WhatsApp:</strong> (11) 99999-9999
+                  <strong>WhatsApp:</strong> (27) 99659-0453
                 </div>
               </div>
             </div>
           </div>
         </main>
-        <Footer />
+        {isMobile ? <FooterMobile /> : <FooterDesktop />}
       </div>
     </>
   );

@@ -1,0 +1,29 @@
+import Image from 'next/image';
+import styles from './Footer.module.scss';
+
+export default function FooterMobile() {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.content}>
+        <p className={styles.copyright}>
+          © 2025 Powered By AG Custom. Todos os Direitos Reservados
+        </p>
+
+        <div className={styles.logo}>
+          <Image
+            src="/logoAG.svg"
+            alt="AG Custom Logo"
+            width={25}
+            height={10}
+            quality={100}
+            priority={false}
+            style={{
+              objectFit: 'contain',
+              imageRendering: 'crisp-edges'
+            }}
+          />
+        </div>
+      </div>
+    </footer>
+  );
+} 
