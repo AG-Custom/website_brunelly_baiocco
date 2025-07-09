@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-background-primary);
 }
 
 .main {
@@ -16,6 +17,28 @@
   }
 }
 
+// Layout Desktop - Duas colunas
+.desktopLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  min-height: calc(100vh - 200px);
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .title {
   font-size: 3rem;
   color: var(--color-text-dark);
@@ -25,6 +48,101 @@
   @media (max-width: 768px) {
     font-size: 2.2rem;
     margin-bottom: 2rem;
+  }
+}
+
+// Título desktop
+.desktopTitle {
+  font-size: 3.5rem;
+  color: var(--color-text-dark);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+// Card de contatos (coluna esquerda)
+.contactCard {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.myName {
+  font-size: 1.8rem;
+  color: var(--color-text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.contactDetails {
+  margin-bottom: 2rem;
+}
+
+.contactItem {
+  font-size: 1.1rem;
+  color: var(--color-text-medium);
+  margin-bottom: 0.8rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Ícones sociais
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  
+  &.whatsapp {
+    background-color: #25D366;
+    color: white;
+    
+    &:hover {
+      background-color: #1faa52;
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.facebook {
+    background-color: #1877F2;
+    color: white;
+    
+    &:hover {
+      background-color: #166fe5;
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+    }
+  }
+  
+  &.tiktok {
+    background-color: #000000;
+    color: white;
+    
+    &:hover {
+      background-color: #333333;
+      transform: translateY(-2px);
+    }
   }
 }
 
@@ -135,6 +253,22 @@
   }
 }
 
+// Estilo específico do botão no formulário desktop
+.desktopForm .submitButton {
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  align-self: flex-end;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  
+  &:hover {
+    background-color: var(--color-button-hover-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
 .methods {
   display: flex;
   flex-direction: column;
@@ -152,4 +286,24 @@
   @media (max-width: 768px) {
     font-size: 1rem;
   }
+}
+
+// Formulário desktop (coluna direita)
+.formCard {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.desktopForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 } 
