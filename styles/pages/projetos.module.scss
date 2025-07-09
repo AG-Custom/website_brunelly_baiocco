@@ -410,7 +410,7 @@
 
 .testimonialAuthor {
   font-size: 0.9rem;
-  color: #a37361;
+  color: var(--color-button-bg-light);
   font-weight: 600;
   letter-spacing: 0.5px;
   text-align: left;
@@ -420,7 +420,7 @@
 
 .testimonialText {
   font-size: 1rem;
-  color: #333;
+  color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 0;
   font-family: 'Josefin Slab', serif;
@@ -439,7 +439,7 @@
   width: 50px;
   height: 50px;
   font-size: 1.8rem;
-  color: #444;
+  color: var(--color-text-light);
   cursor: pointer;
   z-index: 20;
   transition: all 0.3s ease;
@@ -449,9 +449,9 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
   &:hover {
-    background-color: #a37361;
+    background-color: var(--color-button-bg-light);
     color: white;
-    border-color: #a37361;
+    border-color: var(--color-button-bg-light);
     transform: translateY(-50%) scale(1.1);
   }
 }

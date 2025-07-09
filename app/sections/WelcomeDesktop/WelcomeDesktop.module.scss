@@ -135,7 +135,7 @@
 }
 
 .ctaButton {
-  background-color: #5F4136;
+  background-color: var(--color-button-bg);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -149,7 +149,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #4a332b;
+  background-color: var(--color-button-hover);
 }
 
 .imageContainer {

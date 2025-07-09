@@ -21,7 +21,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4A4A4A;
+  color: var(--color-text-dark);
   text-decoration: none;
 }
 
@@ -41,7 +41,7 @@
 .hamburgerLine {
   width: 25px;
   height: 3px;
-  background-color: #4A4A4A;
+  background-color: var(--color-text-dark);
   transition: all 0.3s ease;
   transform-origin: 1px;
 }
@@ -82,11 +82,11 @@
 
 .menuLink {
   font-size: 2rem;
-  color: #4A4A4A;
+  color: var(--color-text-dark);
   text-decoration: none;
   transition: color 0.3s ease;
   
   &:hover {
-    color: #A37361;
+    color: var(--color-button-bg-light);
   }
 } 

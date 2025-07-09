@@ -47,7 +47,7 @@
 }
 
 .button {
-  background-color: #A37361;
+  background-color: var(--color-button-bg-light);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -60,7 +60,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
   &:hover {
-    background-color: #8B614F;
+    background-color: var(--color-button-hover-light);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }

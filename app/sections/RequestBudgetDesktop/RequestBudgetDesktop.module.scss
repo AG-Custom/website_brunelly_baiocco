@@ -10,7 +10,7 @@
   text-align: center;
   font-size: 3rem;
   margin-bottom: 30px;
-  color: #4A4A4A;
+  color: var(--color-text-dark);
 }
 
 .card {
@@ -42,27 +42,27 @@
 
 .name {
   font-size: 2rem;
-  color: #4A4A4A;
+  color: var(--color-text-dark);
   margin: 0;
   text-align: left;
 }
 
 .email {
   font-size: 1.5rem;
-  color: #666;
+  color: var(--color-text-medium);
   margin: 0;
   text-align: left;
 }
 
 .phone {
   font-size: 1.5rem;
-  color: #666;
+  color: var(--color-text-medium);
   margin: 0;
   text-align: left;
 }
 
 .button {
-  background-color: #5F4136;
+  background-color: var(--color-button-bg);
   color: white;
   padding: 1rem 1.5rem;
   border: none;
@@ -79,7 +79,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
   &:hover {
-    background-color: #8B614F;
+    background-color: var(--color-button-hover-light);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }

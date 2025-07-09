@@ -3,12 +3,19 @@
 
 // Variáveis de cores
 :root {
-  --color-text: #000000;
-  --color-black: #000000;
+  --color-text: #2C2C2C;
+  --color-black: #2C2C2C;
   --color-white: #FFFFFF;
-  --color-background: #FBF5E7;
-  --color-button-bg: #5F4136;
-  --color-button-text: #FBF5E7;
+  --color-background: #F0E5D0;
+  --color-button-bg: #4A2F26;
+  --color-button-text: #F0E5D0;
+  --color-button-bg-light: #8B5E45;
+  --color-button-hover: #3A221A;
+  --color-button-hover-light: #6D4A38;
+  --color-text-dark: #3A3A3A;
+  --color-text-medium: #555;
+  --color-text-light: #333;
+  --color-background-light: #F0F0F0;
 }
 
 * {
