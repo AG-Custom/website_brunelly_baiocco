@@ -31,7 +31,7 @@ const AboutMeDesktop = () => {
         
         <div className={styles.socialIcons}>
           <a 
-            href="https://wa.me/5527999999999" 
+            href="https://api.whatsapp.com/send?phone=5527996590453" 
             target="_blank" 
             rel="noopener noreferrer"
             className={`${styles.socialIcon} ${styles.whatsapp}`}
@@ -42,7 +42,7 @@ const AboutMeDesktop = () => {
           </a>
           
           <a 
-            href="https://facebook.com/brunellybaiocco" 
+            href="https://www.facebook.com/brunelly.baiocco" 
             target="_blank" 
             rel="noopener noreferrer"
             className={`${styles.socialIcon} ${styles.facebook}`}
@@ -53,7 +53,7 @@ const AboutMeDesktop = () => {
           </a>
           
           <a 
-            href="https://instagram.com/brunellybaiocco" 
+            href="https://www.instagram.com/brunellybaiocco.arq" 
             target="_blank" 
             rel="noopener noreferrer"
             className={`${styles.socialIcon} ${styles.instagram}`}
@@ -64,7 +64,7 @@ const AboutMeDesktop = () => {
           </a>
           
           <a 
-            href="https://tiktok.com/@brunellybaiocco" 
+            href="https://www.tiktok.com/@brunellybaiocco.arq" 
             target="_blank" 
             rel="noopener noreferrer"
             className={`${styles.socialIcon} ${styles.tiktok}`}
