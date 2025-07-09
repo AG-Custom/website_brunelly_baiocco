@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
 
 // Desktop Components
 import HeaderDesktop from '../app/components/HeaderDesktop';
@@ -17,25 +16,19 @@ import AboutMeMobile from '../app/sections/AboutMeMobile';
 import ServicesMobile from '../app/sections/ServicesMobile';
 import RequestBudgetMobile from '../app/sections/RequestBudgetMobile';
 
+// Hook customizado
+import { useIsMobile } from '../app/hooks/useIsMobile';
+import Loading from '../app/components/Loading';
+
 import styles from '../styles/pages/index.module.scss';
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    // Check on mount
-    checkIsMobile();
-
-    // Add event listener
-    window.addEventListener('resize', checkIsMobile);
-
-    // Cleanup
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
+  // Mostra loading até detectar o tipo de dispositivo
+  if (isMobile === undefined) {
+    return <Loading />;
+  }
 
   return (
     <>

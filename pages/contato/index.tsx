@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
 
 // Desktop Components
 import HeaderDesktop from '../../app/components/HeaderDesktop';
@@ -9,20 +8,19 @@ import FooterDesktop from '../../app/components/FooterDesktop';
 import HeaderMobile from '../../app/components/HeaderMobile';
 import FooterMobile from '../../app/components/FooterMobile';
 
+// Hook customizado
+import { useIsMobile } from '../../app/hooks/useIsMobile';
+import Loading from '../../app/components/Loading';
+
 import styles from '../../styles/pages/contato.module.scss';
 
 export default function Contato() {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
+  // Mostra loading até detectar o tipo de dispositivo
+  if (isMobile === undefined) {
+    return <Loading />;
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
