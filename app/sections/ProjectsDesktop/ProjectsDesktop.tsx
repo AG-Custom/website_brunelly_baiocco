@@ -61,16 +61,22 @@ export default function ProjectsDesktop() {
     },
     {
       id: 3,
-      image: "/project3.png",
-      title: "Escritório Corporativo",
-      description: "Ambiente profissional moderno que promove produtividade e bem-estar.",
+      image: "/projects/projeto-residencial-comercial/1.jpg",
+      title: "Projeto residencial e comercial",
+      description: "Projeto residencial e comercial que transformam espaços",
       category: "Comercial",
-      fullDescription: "Este projeto corporativo foi desenvolvido com foco no bem-estar dos colaboradores e na otimização da produtividade. Criamos espaços flexíveis que se adaptam às diferentes necessidades de trabalho, desde áreas colaborativas até espaços para concentração individual. A iluminação foi cuidadosamente planejada para reduzir o cansaço visual, enquanto elementos biofílicos foram incorporados para melhorar a qualidade do ar e criar um ambiente mais saudável. A acústica foi tratada com materiais específicos para garantir conforto sonoro.",
+      fullDescription: "Um projeto inovador de um edifício de uso misto, com andares dedicados a kitnets e uma loja comercial no térreo. Este empreendimento foi concebido com o intuito de proporcionar um ambiente inspirador e produtivo.",
       images: [
-        { src: "/project3.png", alt: "Recepção do escritório corporativo" },
-        { src: "/project1.png", alt: "Área de trabalho colaborativo" },
-        { src: "/project2.png", alt: "Sala de reuniões executiva" },
-        { src: "/project4.png", alt: "Espaço de descanso e café" }
+        { src: "/projects/projeto-residencial-comercial/1.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/2.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/3.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/4.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/5.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/6.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/7.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/8.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/9.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/10.jpg", alt: "" }
       ]
     },
     {
