@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import styles from './Header.module.scss';
 
 export default function Header() {
@@ -45,6 +46,17 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      <div className={styles.logo}>
+        <Link href="/">
+          <Image 
+            src="/logo.svg" 
+            alt="Brunelly Baiocco Arquitetura" 
+            width={200} 
+            height={48}
+            priority
+          />
+        </Link>
+      </div>
       <nav className={styles.nav}>
         <Link href="/" className={styles.navLink}>Início</Link>
         <a href="#aboutme" className={styles.navLink} onClick={scrollToAboutMe}>Sobre Mim</a>
