@@ -114,30 +114,24 @@ export default function ProjectsDesktop() {
     },
     {
       id: 5,
-      image: "/project5.png",
-      title: "Loft Industrial",
-      description: "Conversão de espaço industrial em residência moderna preservando elementos originais.",
-      category: "Residencial",
-      fullDescription: "A transformação deste antigo galpão industrial em uma residência contemporânea foi um desafio empolgante. Preservamos elementos originais como as estruturas metálicas, tijolos aparentes e o pé-direito alto, que se tornaram protagonistas do projeto. A distribuição dos espaços foi repensada para criar diferentes ambientes dentro do conceito de loft, usando divisórias que não tocam o teto para manter a sensação de amplitude. A iluminação industrial foi reinterpretada com peças contemporâneas que respeitam a identidade do espaço original.",
+      image: "/transformacao_espaco_bem_estar.png",
+      title: "Em Breve",
+      description: "Novo projeto em desenvolvimento",
+      category: "Em Breve",
+      fullDescription: "Estamos trabalhando em mais um projeto incrível que em breve estará disponível aqui. Fique ligado para novidades!",
       images: [
-        { src: "/project5.png", alt: "Vista geral do loft industrial" },
-        { src: "/project1.png", alt: "Cozinha com estrutura metálica aparente" },
-        { src: "/project2.png", alt: "Quarto com tijolos originais" },
-        { src: "/project3.png", alt: "Área social com pé-direito duplo" }
+        { src: "/transformacao_espaco_bem_estar.png", alt: "Em breve" }
       ]
     },
     {
       id: 6,
-      image: "/project6.png",
-      title: "Clínica Médica",
-      description: "Design acolhedor e funcional que prioriza conforto e bem-estar dos pacientes.",
-      category: "Comercial",
-      fullDescription: "O projeto desta clínica médica teve como premissa principal criar um ambiente que transmitisse tranquilidade e confiança aos pacientes. Fugimos da estética hospitalar tradicional, optando por cores suaves, iluminação natural e materiais que remetem ao conforto residencial. O layout foi cuidadosamente planejado para otimizar o fluxo de pacientes e profissionais, garantindo privacidade e eficiência operacional. Elementos biofílicos foram incorporados para reduzir a ansiedade dos pacientes, enquanto a acústica foi tratada para garantir sigilo médico e conforto sonoro.",
+      image: "/transformacao_espaco_bem_estar.png",
+      title: "Em Breve",
+      description: "Novo projeto em desenvolvimento",
+      category: "Em Breve",
+      fullDescription: "Estamos trabalhando em mais um projeto incrível que em breve estará disponível aqui. Fique ligado para novidades!",
       images: [
-        { src: "/project6.png", alt: "Recepção acolhedora da clínica" },
-        { src: "/project1.png", alt: "Consultório médico moderno" },
-        { src: "/project2.png", alt: "Sala de espera confortável" },
-        { src: "/project3.png", alt: "Corredor com iluminação natural" }
+        { src: "/transformacao_espaco_bem_estar.png", alt: "Em breve" }
       ]
     }
   ];
@@ -157,7 +151,7 @@ export default function ProjectsDesktop() {
       <div className={styles.projectsGrid}>
         {/* Linha 1: Projeto 1 (menor) | Projeto 2 (maior) */}
         <div className={styles.projectRow}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[0].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[0].image}
@@ -180,7 +174,7 @@ export default function ProjectsDesktop() {
               </button>
             </div>
           </div>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[1].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[1].image}
@@ -207,7 +201,7 @@ export default function ProjectsDesktop() {
 
         {/* Linha 2: Projeto 3 (maior) | Projeto 4 (menor) */}
         <div className={styles.projectRow}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[2].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[2].image}
@@ -230,7 +224,7 @@ export default function ProjectsDesktop() {
               </button>
             </div>
           </div>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[3].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[3].image}
@@ -257,7 +251,7 @@ export default function ProjectsDesktop() {
 
         {/* Linha 3: Projeto 5 (menor) | Projeto 6 (maior) */}
         <div className={styles.projectRow}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[4].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[4].image}
@@ -272,15 +266,17 @@ export default function ProjectsDesktop() {
             <div className={styles.projectContent}>
               <h3 className={styles.projectTitle}>{projects[4].title}</h3>
               <p className={styles.projectDescription}>{projects[4].description}</p>
-              <button 
-                className={styles.projectButton}
-                onClick={() => openModal(projects[4])}
-              >
-                Ver Projeto
-              </button>
+              {projects[4].category !== "Em Breve" && (
+                <button 
+                  className={styles.projectButton}
+                  onClick={() => openModal(projects[4])}
+                >
+                  Ver Projeto
+                </button>
+              )}
             </div>
           </div>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[5].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[5].image}
@@ -295,12 +291,14 @@ export default function ProjectsDesktop() {
             <div className={styles.projectContent}>
               <h3 className={styles.projectTitle}>{projects[5].title}</h3>
               <p className={styles.projectDescription}>{projects[5].description}</p>
-              <button 
-                className={styles.projectButton}
-                onClick={() => openModal(projects[5])}
-              >
-                Ver Projeto
-              </button>
+              {projects[5].category !== "Em Breve" && (
+                <button 
+                  className={styles.projectButton}
+                  onClick={() => openModal(projects[5])}
+                >
+                  Ver Projeto
+                </button>
+              )}
             </div>
           </div>
         </div>
