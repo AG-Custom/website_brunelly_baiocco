@@ -31,29 +31,32 @@ export default function ProjectsDesktop() {
       category: "Residencial",
       fullDescription: " Desenvolvido com a proposta de combinar a elegância e o conforto da arquitetura contemporânea com a serenidade e a conexão com a natureza.",
       images: [
-        { src: "/projects/casa-no-campo/1.jpg", alt: "Sala principal do apartamento moderno" },
-        { src: "/projects/casa-no-campo/2.jpg", alt: "Cozinha integrada com ilha" },
-        { src: "/projects/casa-no-campo/3.jpg", alt: "Quarto master com closet" },
-        { src: "/projects/casa-no-campo/4.jpg", alt: "Banheiro com acabamentos modernos" },
-        { src: "/projects/casa-no-campo/5.jpg", alt: "Banheiro com acabamentos modernos" },
-        { src: "/projects/casa-no-campo/6.jpg", alt: "Banheiro com acabamentos modernos" },
-        { src: "/projects/casa-no-campo/7.jpg", alt: "Banheiro com acabamentos modernos" },
-        { src: "/projects/casa-no-campo/8.jpg", alt: "Banheiro com acabamentos modernos" },
-        { src: "/projects/casa-no-campo/9.jpg", alt: "Banheiro com acabamentos modernos" }
+        { src: "/projects/casa-no-campo/1.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/2.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/3.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/4.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/5.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/6.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/7.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/8.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/9.jpg", alt: "" }
       ]
     },
     {
       id: 2,
-      image: "/project2.png",
-      title: "Casa de Praia",
-      description: "Design aconchegante que integra a beleza natural com conforto contemporâneo.",
+      image: "/projects/residencia-contemporanea/1.jpg",
+      title: "Residência contemporânea",
+      description: "Harmonia entre formas e funcionalidade",
       category: "Residencial",
-      fullDescription: "Localizada a poucos metros do mar, esta residência de veraneio foi projetada para maximizar a conexão com a natureza. Utilizamos materiais naturais como madeira e pedra, criando uma harmonia perfeita com o ambiente costeiro. Os espaços foram pensados para proporcionar relaxamento e contemplação, com grandes aberturas que permitem a entrada da brisa marinha e oferecem vistas deslumbrantes do oceano. A paleta de cores inspirada no mar e na areia complementa a atmosfera serena do projeto.",
+      fullDescription: " Encante-se com um espaço acolhedor e elegante, especialmente projetado para atender às necessidades dos residentes.",
       images: [
-        { src: "/project2.png", alt: "Vista frontal da casa de praia" },
-        { src: "/project1.png", alt: "Varanda com vista para o mar" },
-        { src: "/project3.png", alt: "Sala de estar com decoração natural" },
-        { src: "/project4.png", alt: "Quarto com vista panorâmica" }
+        { src: "/projects/residencia-contemporanea/1.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/2.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/3.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/4.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/5.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/6.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/7.jpg", alt: "" }
       ]
     },
     {
