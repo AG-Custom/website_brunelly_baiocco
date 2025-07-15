@@ -144,42 +144,46 @@
 }
 
 .projectTitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
   font-family: 'Josefin Slab', serif;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02em;
   
   @media (max-width: 768px) {
     color: var(--color-button-bg);
     margin-bottom: 0.5rem;
     text-shadow: none;
+    font-size: 1.3rem;
   }
 }
 
 .projectDescription {
-  font-size: 1rem;
-  line-height: 1.35;
+  font-size: 1.1rem;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
   font-family: 'Josefin Slab', serif;
-  font-weight: 400;
+  font-weight: 500;
   max-width: 90%;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02em;
   
   @media (max-width: 768px) {
     color: var(--color-text);
     margin-bottom: 1rem;
     text-shadow: none;
+    font-size: 1rem;
   }
 }
 
 .projectButton {
   cursor: pointer;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: white;
   background-color: var(--color-button-bg);
@@ -187,23 +191,29 @@
   border-radius: 5px;
   font-family: 'Josefin Slab', serif;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
   &:hover {
-    background-color: rgba(95, 65, 54, 0.8);
+    background-color: var(--color-button-hover);
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
   
   &:focus {
-    outline: 2px dashed white;
+    outline: 2px solid white;
     outline-offset: 3px;
   }
   
   @media (max-width: 768px) {
     background-color: var(--color-button-bg);
     color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    box-shadow: none;
     
     &:hover {
-      background-color: rgba(95, 65, 54, 0.9);
+      background-color: var(--color-button-hover);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   }
 } 
