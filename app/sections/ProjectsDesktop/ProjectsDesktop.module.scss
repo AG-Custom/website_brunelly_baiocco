@@ -63,56 +63,81 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%;
+    height: 100%;
     pointer-events: none;
     background-image: linear-gradient(
       to bottom,
       hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 0.009) 11.7%,
-      hsla(0, 0%, 0%, 0.034) 22.1%,
-      hsla(0, 0%, 0%, 0.072) 31.2%,
-      hsla(0, 0%, 0%, 0.123) 39.4%,
-      hsla(0, 0%, 0%, 0.182) 46.6%,
-      hsla(0, 0%, 0%, 0.249) 53.1%,
-      hsla(0, 0%, 0%, 0.320) 58.9%,
-      hsla(0, 0%, 0%, 0.394) 64.3%,
-      hsla(0, 0%, 0%, 0.468) 69.3%,
-      hsla(0, 0%, 0%, 0.540) 74.1%,
-      hsla(0, 0%, 0%, 0.607) 78.8%,
-      hsla(0, 0%, 0%, 0.668) 83.6%,
-      hsla(0, 0%, 0%, 0.721) 88.7%,
-      hsla(0, 0%, 0%, 0.762) 94.1%,
-      hsla(0, 0%, 0%, 0.790) 100%
+      hsla(0, 0%, 0%, 0.3) 30%,
+      hsla(0, 0%, 0%, 0.7) 100%
     );
-    transform: translateY(0);
-    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 1;
     z-index: 2;
+  }
+
+  // Estilo especial para cards "Em Breve"
+  &[data-category="Em Breve"] {
+    .projectImage {
+      opacity: 0.7;
+      filter: grayscale(0.3) brightness(0.9);
+    }
+
+    .projectContent {
+      background: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      justify-content: center;
+      padding: 2rem;
+
+      .projectTitle {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .projectDescription {
+        font-size: 1.2rem;
+        font-style: italic;
+        opacity: 0.9;
+      }
+
+      .projectButton {
+        opacity: 0.9;
+        background-color: transparent;
+        border: 2px solid white;
+
+        &:hover {
+          background-color: white;
+          color: var(--color-button-bg);
+        }
+      }
+    }
   }
   
   @media (max-width: 768px) {
     height: 250px;
-  }
-  
-  // Estados de hover para desktop
-  @media (hover: hover) and (min-width: 769px) {
-    &:after {
-      transform: translateY(100%);
-    }
-    
-    &:hover {
-      align-items: center;
-      
-      &:after {
-        transform: translateY(-50%);
-      }
-      
+
+    &[data-category="Em Breve"] {
       .projectContent {
-        transform: translateY(0);
-        
-        > *:not(.projectTitle) {
-          opacity: 1;
-          transform: translateY(0);
-          transition-delay: calc(0.7s / 8);
+        background: var(--color-white);
+        height: auto;
+
+        .projectTitle {
+          font-size: 1.5rem;
+          color: var(--color-button-bg);
+        }
+
+        .projectDescription {
+          color: var(--color-text);
+        }
+
+        .projectButton {
+          background-color: var(--color-button-bg);
+          color: white;
+          border: none;
+
+          &:hover {
+            background-color: var(--color-button-hover);
+            color: white;
+          }
         }
       }
     }
@@ -139,21 +164,26 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem;
   text-align: center;
   color: white;
   z-index: 3;
-  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
   
   @media (hover: hover) and (min-width: 769px) {
-    transform: translateY(calc(100% - 4.5rem));
+    padding-bottom: 2.5rem;
     
-    > *:not(.projectTitle) {
+    .projectDescription {
       opacity: 0;
-      transform: translateY(1rem);
-      transition: 
-        transform 0.7s cubic-bezier(0.19, 1, 0.22, 1),
-        opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .projectButton {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
     }
   }
   
@@ -165,39 +195,59 @@
   }
 }
 
+.projectCard:hover {
+  .projectContent {
+    transform: translateY(0);
+    
+    .projectDescription,
+    .projectButton {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 .projectTitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
   font-family: 'Josefin Slab', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02em;
   
   @media (max-width: 768px) {
     color: var(--color-button-bg);
     margin-bottom: 0.5rem;
+    text-shadow: none;
+    font-size: 1.3rem;
   }
 }
 
 .projectDescription {
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1.35;
+  font-size: 1.1rem;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
   font-family: 'Josefin Slab', serif;
-  font-weight: 300;
+  font-weight: 500;
+  max-width: 90%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02em;
   
   @media (max-width: 768px) {
     color: var(--color-text);
     margin-bottom: 1rem;
+    text-shadow: none;
+    font-size: 1rem;
   }
 }
 
 .projectButton {
   cursor: pointer;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: white;
   background-color: var(--color-button-bg);
@@ -205,23 +255,29 @@
   border-radius: 5px;
   font-family: 'Josefin Slab', serif;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
   &:hover {
-    background-color: rgba(95, 65, 54, 0.8);
+    background-color: var(--color-button-hover);
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
   
   &:focus {
-    outline: 2px dashed white;
+    outline: 2px solid white;
     outline-offset: 3px;
   }
   
   @media (max-width: 768px) {
     background-color: var(--color-button-bg);
     color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    box-shadow: none;
     
     &:hover {
-      background-color: rgba(95, 65, 54, 0.9);
+      background-color: var(--color-button-hover);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   }
 } 

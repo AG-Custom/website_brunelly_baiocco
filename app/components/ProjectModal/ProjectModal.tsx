@@ -14,10 +14,6 @@ interface Project {
   description: string;
   category: string;
   fullDescription: string;
-  client: string;
-  location: string;
-  year: string;
-  area: string;
   images: ProjectImage[];
 }
 
@@ -118,7 +114,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 >
                   <Image
                     src={img.src}
-                    alt={img.alt}
+                    alt={img.alt || `Imagem ${index + 1} do projeto ${project.title}`}
                     fill
                     style={{ objectFit: 'cover' }}
                     quality={80}
@@ -138,20 +134,8 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
           <div className={styles.projectDetails}>
             <div className={styles.detailRow}>
-              <span className={styles.detailLabel}>Cliente:</span>
-              <span className={styles.detailValue}>{project.client}</span>
-            </div>
-            <div className={styles.detailRow}>
-              <span className={styles.detailLabel}>Localização:</span>
-              <span className={styles.detailValue}>{project.location}</span>
-            </div>
-            <div className={styles.detailRow}>
-              <span className={styles.detailLabel}>Ano:</span>
-              <span className={styles.detailValue}>{project.year}</span>
-            </div>
-            <div className={styles.detailRow}>
-              <span className={styles.detailLabel}>Área:</span>
-              <span className={styles.detailValue}>{project.area}</span>
+              <span className={styles.detailLabel}>Categoria:</span>
+              <span className={styles.detailValue}>{project.category}</span>
             </div>
           </div>
 

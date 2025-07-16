@@ -15,10 +15,6 @@ interface Project {
   description: string;
   category: string;
   fullDescription: string;
-  client: string;
-  location: string;
-  year: string;
-  area: string;
   images: ProjectImage[];
 }
 
@@ -29,110 +25,113 @@ export default function ProjectsDesktop() {
   const projects: Project[] = [
     {
       id: 1,
-      image: "/project1.png",
-      title: "Apartamento Moderno",
-      description: "Transformação completa de apartamento com conceito minimalista e funcional.",
+      image: "/projects/casa-no-campo/1.jpg",
+      title: "Casa no campo",
+      description: "Harmonia entre natureza e arquitetura",
       category: "Residencial",
-      fullDescription: "Este projeto representa uma transformação completa de um apartamento de 120m², onde priorizamos a funcionalidade sem abrir mão da estética. O conceito minimalista guiou todas as decisões, desde a escolha da paleta de cores neutras até a seleção de mobiliário com linhas clean. A integração dos espaços sociais criou uma sensação de amplitude, enquanto soluções inteligentes de armazenamento mantêm a organização visual. A iluminação natural foi maximizada através de grandes aberturas e espelhos estrategicamente posicionados.",
-      client: "Família Silva",
-      location: "São Paulo, SP",
-      year: "2023",
-      area: "120m²",
+      fullDescription: " Desenvolvido com a proposta de combinar a elegância e o conforto da arquitetura contemporânea com a serenidade e a conexão com a natureza.",
       images: [
-        { src: "/project1.png", alt: "Sala principal do apartamento moderno" },
-        { src: "/project2.png", alt: "Cozinha integrada com ilha" },
-        { src: "/project3.png", alt: "Quarto master com closet" },
-        { src: "/project4.png", alt: "Banheiro com acabamentos modernos" }
+        { src: "/projects/casa-no-campo/1.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/2.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/3.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/4.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/5.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/6.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/7.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/8.jpg", alt: "" },
+        { src: "/projects/casa-no-campo/9.jpg", alt: "" }
       ]
     },
     {
       id: 2,
-      image: "/project2.png",
-      title: "Casa de Praia",
-      description: "Design aconchegante que integra a beleza natural com conforto contemporâneo.",
+      image: "/projects/residencia-contemporanea/1.jpg",
+      title: "Residência contemporânea",
+      description: "Harmonia entre formas e funcionalidade",
       category: "Residencial",
-      fullDescription: "Localizada a poucos metros do mar, esta residência de veraneio foi projetada para maximizar a conexão com a natureza. Utilizamos materiais naturais como madeira e pedra, criando uma harmonia perfeita com o ambiente costeiro. Os espaços foram pensados para proporcionar relaxamento e contemplação, com grandes aberturas que permitem a entrada da brisa marinha e oferecem vistas deslumbrantes do oceano. A paleta de cores inspirada no mar e na areia complementa a atmosfera serena do projeto.",
-      client: "Família Costa",
-      location: "Búzios, RJ",
-      year: "2023",
-      area: "180m²",
+      fullDescription: " Encante-se com um espaço acolhedor e elegante, especialmente projetado para atender às necessidades dos residentes.",
       images: [
-        { src: "/project2.png", alt: "Vista frontal da casa de praia" },
-        { src: "/project1.png", alt: "Varanda com vista para o mar" },
-        { src: "/project3.png", alt: "Sala de estar com decoração natural" },
-        { src: "/project4.png", alt: "Quarto com vista panorâmica" }
+        { src: "/projects/residencia-contemporanea/1.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/2.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/3.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/4.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/5.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/6.jpg", alt: "" },
+        { src: "/projects/residencia-contemporanea/7.jpg", alt: "" }
       ]
     },
     {
       id: 3,
-      image: "/project3.png",
-      title: "Escritório Corporativo",
-      description: "Ambiente profissional moderno que promove produtividade e bem-estar.",
+      image: "/projects/projeto-residencial-comercial/1.jpg",
+      title: "Projeto residencial e comercial",
+      description: "Projeto residencial e comercial que transformam espaços",
       category: "Comercial",
-      fullDescription: "Este projeto corporativo foi desenvolvido com foco no bem-estar dos colaboradores e na otimização da produtividade. Criamos espaços flexíveis que se adaptam às diferentes necessidades de trabalho, desde áreas colaborativas até espaços para concentração individual. A iluminação foi cuidadosamente planejada para reduzir o cansaço visual, enquanto elementos biofílicos foram incorporados para melhorar a qualidade do ar e criar um ambiente mais saudável. A acústica foi tratada com materiais específicos para garantir conforto sonoro.",
-      client: "TechCorp Solutions",
-      location: "São Paulo, SP",
-      year: "2022",
-      area: "450m²",
+      fullDescription: "Um projeto inovador de um edifício de uso misto, com andares dedicados a kitnets e uma loja comercial no térreo. Este empreendimento foi concebido com o intuito de proporcionar um ambiente inspirador e produtivo.",
       images: [
-        { src: "/project3.png", alt: "Recepção do escritório corporativo" },
-        { src: "/project1.png", alt: "Área de trabalho colaborativo" },
-        { src: "/project2.png", alt: "Sala de reuniões executiva" },
-        { src: "/project4.png", alt: "Espaço de descanso e café" }
+        { src: "/projects/projeto-residencial-comercial/1.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/2.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/3.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/4.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/5.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/6.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/7.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/8.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/9.jpg", alt: "" },
+        { src: "/projects/projeto-residencial-comercial/10.jpg", alt: "" }
       ]
     },
     {
       id: 4,
-      image: "/project4.png",
-      title: "Casa de Campo",
-      description: "Projeto que valoriza a natureza local e cria harmonia entre interior e exterior.",
+      image: "/projects/moradia-adaptada/1.jpg",
+      title: "Moradia Adaptada para o Envelhecimento Ativo",
+      description: "Moradia adaptada para o envelhecimento ativo",
       category: "Residencial",
-      fullDescription: "Situada em meio à vegetação nativa, esta casa de campo foi projetada para ser um refúgio da vida urbana. O projeto valoriza a topografia natural do terreno e preserva a vegetação existente. Utilizamos materiais regionais como pedra local e madeira de reflorestamento, criando uma arquitetura que dialoga respeitosamente com o entorno. Os espaços internos foram pensados para integrar-se ao exterior, com grandes aberturas e varandas que funcionam como extensão dos ambientes internos. A sustentabilidade foi priorizada através de captação de água da chuva e energia solar.",
-      client: "Família Oliveira",
-      location: "Campos do Jordão, SP",
-      year: "2023",
-      area: "280m²",
+      fullDescription: "Através da integração de elementos arquitetônicos e da natureza, nosso projeto visa oferecer aos idosos uma experiência de pertencimento, conforto e bem-estar em sua residência na terceira idade.",
       images: [
-        { src: "/project4.png", alt: "Fachada da casa de campo" },
-        { src: "/project1.png", alt: "Sala com lareira e vista para a natureza" },
-        { src: "/project2.png", alt: "Varanda integrada com jardim" },
-        { src: "/project3.png", alt: "Cozinha rústica moderna" }
+        { src: "/projects/moradia-adaptada/1.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/2.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/3.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/4.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/5.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/6.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/7.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/8.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/9.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/10.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/11.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/12.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/13.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/14.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/15.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/16.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/17.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/18.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/19.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/20.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/21.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/22.jpg", alt: "" },
+        { src: "/projects/moradia-adaptada/23.jpg", alt: "" }
       ]
     },
     {
       id: 5,
-      image: "/project5.png",
-      title: "Loft Industrial",
-      description: "Conversão de espaço industrial em residência moderna preservando elementos originais.",
-      category: "Residencial",
-      fullDescription: "A transformação deste antigo galpão industrial em uma residência contemporânea foi um desafio empolgante. Preservamos elementos originais como as estruturas metálicas, tijolos aparentes e o pé-direito alto, que se tornaram protagonistas do projeto. A distribuição dos espaços foi repensada para criar diferentes ambientes dentro do conceito de loft, usando divisórias que não tocam o teto para manter a sensação de amplitude. A iluminação industrial foi reinterpretada com peças contemporâneas que respeitam a identidade do espaço original.",
-      client: "Casal Martins",
-      location: "São Paulo, SP",
-      year: "2022",
-      area: "200m²",
+      image: "/transformacao_espaco_bem_estar.png",
+      title: "Em Breve",
+      description: "Novo projeto em desenvolvimento",
+      category: "Em Breve",
+      fullDescription: "Estamos trabalhando em mais um projeto incrível que em breve estará disponível aqui. Fique ligado para novidades!",
       images: [
-        { src: "/project5.png", alt: "Vista geral do loft industrial" },
-        { src: "/project1.png", alt: "Cozinha com estrutura metálica aparente" },
-        { src: "/project2.png", alt: "Quarto com tijolos originais" },
-        { src: "/project3.png", alt: "Área social com pé-direito duplo" }
+        { src: "/transformacao_espaco_bem_estar.png", alt: "Em breve" }
       ]
     },
     {
       id: 6,
-      image: "/project6.png",
-      title: "Clínica Médica",
-      description: "Design acolhedor e funcional que prioriza conforto e bem-estar dos pacientes.",
-      category: "Comercial",
-      fullDescription: "O projeto desta clínica médica teve como premissa principal criar um ambiente que transmitisse tranquilidade e confiança aos pacientes. Fugimos da estética hospitalar tradicional, optando por cores suaves, iluminação natural e materiais que remetem ao conforto residencial. O layout foi cuidadosamente planejado para otimizar o fluxo de pacientes e profissionais, garantindo privacidade e eficiência operacional. Elementos biofílicos foram incorporados para reduzir a ansiedade dos pacientes, enquanto a acústica foi tratada para garantir sigilo médico e conforto sonoro.",
-      client: "Clínica Bem Viver",
-      location: "Rio de Janeiro, RJ",
-      year: "2023",
-      area: "320m²",
+      image: "/transformacao_espaco_bem_estar.png",
+      title: "Em Breve",
+      description: "Novo projeto em desenvolvimento",
+      category: "Em Breve",
+      fullDescription: "Estamos trabalhando em mais um projeto incrível que em breve estará disponível aqui. Fique ligado para novidades!",
       images: [
-        { src: "/project6.png", alt: "Recepção acolhedora da clínica" },
-        { src: "/project1.png", alt: "Consultório médico moderno" },
-        { src: "/project2.png", alt: "Sala de espera confortável" },
-        { src: "/project3.png", alt: "Corredor com iluminação natural" }
+        { src: "/transformacao_espaco_bem_estar.png", alt: "Em breve" }
       ]
     }
   ];
@@ -152,7 +151,7 @@ export default function ProjectsDesktop() {
       <div className={styles.projectsGrid}>
         {/* Linha 1: Projeto 1 (menor) | Projeto 2 (maior) */}
         <div className={styles.projectRow}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[0].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[0].image}
@@ -175,7 +174,7 @@ export default function ProjectsDesktop() {
               </button>
             </div>
           </div>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[1].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[1].image}
@@ -202,7 +201,7 @@ export default function ProjectsDesktop() {
 
         {/* Linha 2: Projeto 3 (maior) | Projeto 4 (menor) */}
         <div className={styles.projectRow}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[2].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[2].image}
@@ -225,7 +224,7 @@ export default function ProjectsDesktop() {
               </button>
             </div>
           </div>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[3].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[3].image}
@@ -252,7 +251,7 @@ export default function ProjectsDesktop() {
 
         {/* Linha 3: Projeto 5 (menor) | Projeto 6 (maior) */}
         <div className={styles.projectRow}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[4].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[4].image}
@@ -267,15 +266,17 @@ export default function ProjectsDesktop() {
             <div className={styles.projectContent}>
               <h3 className={styles.projectTitle}>{projects[4].title}</h3>
               <p className={styles.projectDescription}>{projects[4].description}</p>
-              <button 
-                className={styles.projectButton}
-                onClick={() => openModal(projects[4])}
-              >
-                Ver Projeto
-              </button>
+              {projects[4].category !== "Em Breve" && (
+                <button 
+                  className={styles.projectButton}
+                  onClick={() => openModal(projects[4])}
+                >
+                  Ver Projeto
+                </button>
+              )}
             </div>
           </div>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCard} data-category={projects[5].category}>
             <div className={styles.projectImage}>
               <Image
                 src={projects[5].image}
@@ -290,12 +291,14 @@ export default function ProjectsDesktop() {
             <div className={styles.projectContent}>
               <h3 className={styles.projectTitle}>{projects[5].title}</h3>
               <p className={styles.projectDescription}>{projects[5].description}</p>
-              <button 
-                className={styles.projectButton}
-                onClick={() => openModal(projects[5])}
-              >
-                Ver Projeto
-              </button>
+              {projects[5].category !== "Em Breve" && (
+                <button 
+                  className={styles.projectButton}
+                  onClick={() => openModal(projects[5])}
+                >
+                  Ver Projeto
+                </button>
+              )}
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import styles from './Header.module.scss';
 
 export default function HeaderMobile() {
@@ -60,7 +61,13 @@ export default function HeaderMobile() {
       <header className={styles.header}>
         <div className={styles.content}>
           <Link href="/" className={styles.logo}>
-            Brunelly Baiocco
+            <Image 
+              src="/logo.svg" 
+              alt="Brunelly Baiocco Arquitetura" 
+              width={150} 
+              height={36}
+              priority
+            />
           </Link>
           
           <button 
