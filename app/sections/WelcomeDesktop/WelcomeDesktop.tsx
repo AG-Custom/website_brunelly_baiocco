@@ -7,7 +7,7 @@ const WelcomeDesktop = () => {
     <div className={styles.welcomeSection}>
       <div className={styles.imageContainer}>
         <Image
-          src="/transformacao_espaco_bem_estar.png"
+          src="/background-home.jpg"
           alt="Transformação de Espaço"
           width={1000}
           height={800}
