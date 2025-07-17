@@ -6,26 +6,26 @@ export default function ServicesMobile() {
     {
       id: 1,
       title: "Projetos Arquitetônicos",
-      description: "Desenvolvimento completo de projetos residenciais e comerciais, desde a concepção até a execução.",
-      image: "/transformacao_espaco_bem_estar.png"
+      description: "Desenvolvimento completo de projetos residenciais e comerciais, desde a concepção até a execução, com foco na funcionalidade e sustentabilidade.",
+      image: "/projects/residencia-contemporanea/1.jpg"
     },
     {
       id: 2,
       title: "Design de Interiores",
-      description: "Criação de ambientes funcionais e esteticamente agradáveis, com foco no bem-estar dos usuários.",
-      image: "/transformacao_espaco_bem_estar.png"
+      description: "Criação de ambientes funcionais e esteticamente agradáveis, com foco no bem-estar dos usuários e na personalização dos espaços.",
+      image: "/projects/projeto-residencial-comercial/1.jpg"
     },
     {
       id: 3,
       title: "Consultoria em Sustentabilidade",
-      description: "Soluções eco-friendly para tornar seu projeto mais sustentável e eficiente energeticamente.",
-      image: "/transformacao_espaco_bem_estar.png"
+      description: "Soluções eco-friendly para tornar seu projeto mais sustentável e eficiente energeticamente, reduzindo impactos ambientais.",
+      image: "/projects/moradia-adaptada/1.jpg"
     },
     {
       id: 4,
       title: "Acompanhamento de Obra",
-      description: "Supervisão técnica durante toda a execução do projeto, garantindo qualidade e prazos.",
-      image: "/transformacao_espaco_bem_estar.png"
+      description: "Supervisão técnica durante toda a execução do projeto, garantindo qualidade, prazos e fidelidade ao projeto original.",
+      image: "/projects/casa-no-campo/1.jpg"
     }
   ];
 
