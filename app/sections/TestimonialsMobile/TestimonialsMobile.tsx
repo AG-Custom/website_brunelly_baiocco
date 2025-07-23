@@ -16,12 +16,20 @@ export default function TestimonialsMobile() {
       author: "Thainá Lopez · Cantoro, Vitória · ES"
     },
     {
-      text: "Muito satisfeita com os serviços prestados. A Brunelly foi sempre muito comunicativa e me fez participativa de todo o processo de construção do nosso projeto. Sempre levou o cuidado de atender nossas necessidades e foi muito receptiva às nossas demandas...",
+      text: "Muito satisfeita com os serviços prestados. A Brunelly foi sempre muito comunicativa e me fez participativa de todo o processo de construção do nosso projeto. Sempre levo o cuidado de atender nossas necessidades e foi muito receptiva às nossas demandas. Em todo o tempo ela se mostrou muito segura e competente em sua área, sendo capaz de fornecer soluções criativas e eficientes para o projeto do nosso grande sonho. Ao longo de todo o curso do projeto, a profissional foi organizada, acessível, respeitosa e cumpriu todos os prazos. Eu recomendo a arquiteta para qualquer pessoa que esteja procurando um profissional competente, experiente e qualificado.",
       author: "Lilian Mendes, Anchieta · ES"
     },
     {
-      text: "Conheci a Brunelly através de uma indicação e a Brunelly é uma profissional muito querida! Desde o primeiro contato ela fez com que o sonho do meu consultório de fisioterapia se tornasse realidade...",
-      author: "Thiago Garnica, Vitória · ES"
+      text: "“Brunelly é uma profissional muito querida! Ela fez com que o sonho do meu consultório veterinário se tornasse realidade. O mais incrível é que, do jeito que estava na minha mente, ela conseguiu traduzir para o projeto e executar! Tudo isso em apenas uma hora de conversa online, pois ainda não nos conhecíamos pessoalmente. Amei cada detalhe, todo o processo foi muito bem-sucedido.”",
+      author: "Diogo Garnica, Vitória · ES"
+    },
+    {
+      text: "“A Bru foi de extrema atenção e delicadeza com o nosso projeto. Agradeço muito pelo cuidado e por ter realmente se preocupado em entender a nossa família e ser precisa na decoração da nossa casa. É um sonho poder chegar em casa e ver tudo do jeitinho que queríamos, mas que nem sabíamos como explicar. Nós agradecemos muito!",
+      author: "Elaine Cristina, Serra · ES"
+    },
+    {
+      text: "“Brunelly tem feito um trabalho excelente! Estou no meu segundo projeto com ela. Primeiro, ela realizou o projeto de uso misto residencial e comercial há quatro anos. Atualmente, estou trabalhando com ela no projeto da minha residência e estou amando todas as etapas. Sempre atenciosa, criativa e atualizada com as novidades. Recomendo sempre!",
+      author: "Degmar Júnior, Flórida · EUA"
     }
   ];
 

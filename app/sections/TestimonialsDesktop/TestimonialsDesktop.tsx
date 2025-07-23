@@ -20,8 +20,16 @@ export default function TestimonialsDesktop() {
       author: "Lilian Mendes, Anchieta · ES"
     },
     {
-      text: "Conheci a Brunelly através de uma indicação e a Brunelly é uma profissional muito querida! Desde o primeiro contato ela me fez com que o sonho do meu consultório de fisioterapia se tornasse realidade. O mais incrível é que, de tão acertada que estava na minha cabeça, eu consegui executar junto para o projeto se executar! Tudo isso em apenas uma hora de conversa online, pois ainda não nos conhecíamos pessoalmente. Amei cada detalhe, todo o processo foi muito bem sucedido.",
-      author: "Thiago Garnica, Vitória · ES"
+      text: "“Brunelly é uma profissional muito querida! Ela fez com que o sonho do meu consultório veterinário se tornasse realidade. O mais incrível é que, do jeito que estava na minha mente, ela conseguiu traduzir para o projeto e executar! Tudo isso em apenas uma hora de conversa online, pois ainda não nos conhecíamos pessoalmente. Amei cada detalhe, todo o processo foi muito bem-sucedido.”",
+      author: "Diogo Garnica, Vitória · ES"
+    },
+    {
+      text: "“A Bru foi de extrema atenção e delicadeza com o nosso projeto. Agradeço muito pelo cuidado e por ter realmente se preocupado em entender a nossa família e ser precisa na decoração da nossa casa. É um sonho poder chegar em casa e ver tudo do jeitinho que queríamos, mas que nem sabíamos como explicar. Nós agradecemos muito!",
+      author: "Elaine Cristina, Serra · ES"
+    },
+    {
+      text: "“Brunelly tem feito um trabalho excelente! Estou no meu segundo projeto com ela. Primeiro, ela realizou o projeto de uso misto residencial e comercial há quatro anos. Atualmente, estou trabalhando com ela no projeto da minha residência e estou amando todas as etapas. Sempre atenciosa, criativa e atualizada com as novidades. Recomendo sempre!",
+      author: "Degmar Júnior, Flórida · EUA"
     }
   ];
 
