@@ -1,14 +1,27 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
   background-color: var(--color-background);
-  border-bottom: 2px solid var(--color-button-bg);
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  box-sizing: border-box;
+}
+.divheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background);
+  width: 100%;
+  max-width: 1920px;
+}
+
+.lineHeader {
+  align-items: center;
+  width: 95%;
+  height: 1px;
+  background-color: #8B5E45;
+  margin: 0 auto;
 }
 
 .logo {

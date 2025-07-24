@@ -1,13 +1,40 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './WelcomeDesktop.module.scss';
+import { useEffect, useState } from 'react';
 
 const WelcomeDesktop = () => {
   return (
     <div className={styles.welcomeSection}>
-      <div className={styles.imageContainer}>
-        <Image
-          src="/background-home.jpg"
+      {/* Carousel images array and state */}
+      {(() => {
+      const images = [
+        "/projects/residencia-contemporanea/7.jpg",
+        "/projects/residencia-contemporanea/2.jpg",
+        "/projects/residencia-contemporanea/1.jpg"
+      ];
+      const [current, setCurrent] = useState(0);
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrent((prev) => (prev + 1) % images.length);
+        }, 6000);
+        return () => clearInterval(interval);
+      }, [images.length]);
+
+      const [fade, setFade] = useState(true);
+
+      useEffect(() => {
+        setFade(false);
+        const timeout = setTimeout(() => setFade(true), 300);
+        return () => clearTimeout(timeout);
+      }, [current]);
+
+      return (
+        <>
+        <div className={styles.imageContainer}>
+          <Image
+          src={images[current]}
           alt="Transformação de Espaço"
           width={1000}
           height={800}
@@ -19,11 +46,11 @@ const WelcomeDesktop = () => {
             width: 'auto',
             height: 'auto'
           }}
-        />
-      </div>
-      <div className={styles.textContainer}>
-        <Image
-          src="/background-home.png"
+          />
+        </div>
+        <div className={styles.textContainer}>
+          <Image
+          src="/projects/residencia-contemporanea/4.jpg"
           alt="Background"
           width={1000}
           height={800}
@@ -36,14 +63,17 @@ const WelcomeDesktop = () => {
             width: 'auto',
             height: 'auto'
           }}
-        />
-        <div className={styles.overlay}></div>
-        <div className={styles.content}>
+          />
+          <div className={styles.overlay}></div>
+          <div className={styles.content}>
           <h2 className={styles.title}>Transformando Espaços</h2>
           <p className={styles.subtitle}>em refúgios de saúde e bem-estar</p>
           <Link href="/projetos" className={styles.ctaButton}>saiba mais</Link>
+          </div>
         </div>
-      </div>
+        </>
+      );
+      })()}
     </div>
   );
 };

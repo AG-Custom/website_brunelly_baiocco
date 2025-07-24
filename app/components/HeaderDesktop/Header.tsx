@@ -45,9 +45,11 @@ export default function Header() {
   };
 
   return (
-    <header className={styles.header}>
-      <div className={styles.logo}>
-        <Link href="/">
+    <>
+      <header className={styles.header}>
+        <div className={styles.divheader}>
+        <div className={styles.logo}>
+          <Link href="/">
           <Image 
             src="/logo.svg" 
             alt="Brunelly Baiocco Arquitetura" 
@@ -55,15 +57,18 @@ export default function Header() {
             height={48}
             priority
           />
-        </Link>
-      </div>
-      <nav className={styles.nav}>
+          </Link>
+        </div>
+        </div>
+        <nav className={styles.nav}>
         <Link href="/" className={styles.navLink}>Início</Link>
         <a href="#aboutme" className={styles.navLink} onClick={scrollToAboutMe}>Sobre Mim</a>
         <a href="#services" className={styles.navLink} onClick={scrollToServices}>Serviços</a>
         <Link href="/projetos" className={styles.navLink}>Projetos</Link>
         <Link href="/contato" className={styles.navLink}>Contato</Link>
-      </nav>
-    </header>
+        </nav>
+      </header>
+      <div className={styles.lineHeader} />
+    </>
   );
 } 
